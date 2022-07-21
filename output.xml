@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.2 on darwin)" generated="20220721 11:45:47.738" rpa="false" schemaversion="3">
+<suite id="s1" name="Google" source="/Users/mithunroy/Documents/Robot_Batch_2/testscripts/google.robot">
+<test id="s1-t1" name="TC_001" line="11">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${appurl}</arg>
+<arg>${browsername}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220721 11:45:49.186" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<status status="PASS" starttime="20220721 11:45:49.180" endtime="20220721 11:45:57.221"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220721 11:45:57.223" endtime="20220721 11:45:57.422"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//img[@alt='Google']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220721 11:45:57.464" level="INFO">Current page contains element '//img[@alt='Google']'.</msg>
+<status status="PASS" starttime="20220721 11:45:57.423" endtime="20220721 11:45:57.465"/>
+</kw>
+<kw name="validateGooglePageTitle">
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${runtimepagetitle}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20220721 11:45:57.557" level="INFO">${runtimepagetitle} = Google</msg>
+<status status="PASS" starttime="20220721 11:45:57.468" endtime="20220721 11:45:57.558"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${runtimepagetitle}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220721 11:45:57.566" endtime="20220721 11:45:57.571"/>
+</kw>
+<status status="PASS" starttime="20220721 11:45:57.466" endtime="20220721 11:45:57.572"/>
+</kw>
+<kw name="validateGmailLink">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//a[text()='Gmail']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220721 11:45:57.730" level="INFO">Current page contains element '//a[text()='Gmail']'.</msg>
+<status status="PASS" starttime="20220721 11:45:57.625" endtime="20220721 11:45:57.731"/>
+</kw>
+<status status="PASS" starttime="20220721 11:45:57.574" endtime="20220721 11:45:57.732"/>
+</kw>
+<kw name="validateGoogleSearhTextBox">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>q</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220721 11:45:57.809" level="INFO">Current page contains element 'q'.</msg>
+<status status="PASS" starttime="20220721 11:45:57.738" endtime="20220721 11:45:57.812"/>
+</kw>
+<status status="PASS" starttime="20220721 11:45:57.736" endtime="20220721 11:45:57.828"/>
+</kw>
+<kw name="validateGoogleSearchButton">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>btnK</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220721 11:45:57.908" level="INFO">Current page contains element 'btnK'.</msg>
+<status status="PASS" starttime="20220721 11:45:57.848" endtime="20220721 11:45:57.917"/>
+</kw>
+<status status="PASS" starttime="20220721 11:45:57.845" endtime="20220721 11:45:57.923"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220721 11:45:57.927" endtime="20220721 11:45:58.200"/>
+</kw>
+<status status="PASS" starttime="20220721 11:45:49.174" endtime="20220721 11:45:58.207"/>
+</test>
+<test id="s1-t2" name="TC_002" line="29">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${appurl}</arg>
+<arg>${browsername}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220721 11:45:58.265" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<status status="PASS" starttime="20220721 11:45:58.240" endtime="20220721 11:46:04.971"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220721 11:46:04.973" endtime="20220721 11:46:05.345"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220721 11:46:10.353" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220721 11:46:05.348" endtime="20220721 11:46:10.354"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>(//a[text()='Sign in'])[1]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220721 11:46:10.391" level="INFO">Current page contains element '(//a[text()='Sign in'])[1]'.</msg>
+<status status="PASS" starttime="20220721 11:46:10.355" endtime="20220721 11:46:10.391"/>
+</kw>
+<kw name="validateGooglePageTitle">
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${runtimepagetitle}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20220721 11:46:10.427" level="INFO">${runtimepagetitle} = Google</msg>
+<status status="PASS" starttime="20220721 11:46:10.399" endtime="20220721 11:46:10.428"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${runtimepagetitle}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220721 11:46:10.428" endtime="20220721 11:46:10.433"/>
+</kw>
+<status status="PASS" starttime="20220721 11:46:10.392" endtime="20220721 11:46:10.434"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220721 11:46:10.435" endtime="20220721 11:46:10.655"/>
+</kw>
+<status status="PASS" starttime="20220721 11:45:58.232" endtime="20220721 11:46:10.694"/>
+</test>
+<status status="PASS" starttime="20220721 11:45:47.748" endtime="20220721 11:46:10.728"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Google">Google</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
